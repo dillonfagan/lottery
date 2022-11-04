@@ -19,7 +19,10 @@ contract Lottery {
     }
 
     function pickWinner() public {
+        require(msg.sender == manager, "Unauthorized: Only the manager can pick the winner.");
+
         uint index = random() % players.length;
         players[index].transfer(address(this).balance);
+        players = new address payable[](0);
     }
 }
