@@ -9,7 +9,7 @@ describe("Lottery", () => {
         const lottery = await Lottery.deploy();
     
         return { lottery, owner };
-      }
+    }
 
     it("should set the right manager", async () => {
         const { lottery, owner } = await loadFixture(deployFixture);
