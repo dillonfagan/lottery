@@ -1,13 +1,9 @@
-# Sample Hardhat Project
+# Lottery - Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Lottery is a very basic smart contract to demonstrate a use case of Hardhat and the Solidity programming language.
 
-Try running some of the following tasks:
+## How it works
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+1. An address deploys the Lottery contract and is assigned as its manager.
+2. Additional addresses may call the `enter()` function, which accepts payment (minimum 0.01 Ether). The caller of the endpoint is added to the `players` array and the accepted Ether is added to the contract's `balance`.
+3. At any time, the manager of the Lottery contract may call the `pickWinner()` function, which only the manager is authorized to call. The full balance of the contract is transferred to a random address in the `players` array and the array is reinitialized for another round.
