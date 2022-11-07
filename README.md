@@ -1,4 +1,9 @@
-# Lottery - Smart Contract
+# Lottery [![Hardhat][hardhat-badge]][hardhat] [![License: MIT][license-badge]][license]
+
+[hardhat]: https://hardhat.org/
+[hardhat-badge]: https://img.shields.io/badge/Built%20with-Hardhat-FFDB1C.svg
+[license]: https://opensource.org/licenses/MIT
+[license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
 Lottery is a very basic smart contract to demonstrate a use case of Hardhat and the Solidity programming language.
 
